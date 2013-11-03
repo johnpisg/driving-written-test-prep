@@ -1,0 +1,19 @@
+﻿
+<div data-options="dxView : { name: 'question'} " >
+    <div  data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <h1 class="number" data-bind="text: number"></h1>
+        <h2 class="number" data-bind="text: q"></h2>
+        <br />
+        <div data-bind="dxList: { items: answers, activeStateEnabled: false }">
+            <div data-options="dxTemplate : { name: 'item' } " >
+                <div data-bind="dxCheckBox: { checked: checkedState, clickAction: function() { $root.onAnswerClick($data); } }"></div>
+                <span data-bind="text: id"></span>
+                <span data-bind="text: text" style="padding-left: 5px;"></span>
+            </div>
+        </div>
+        <br />
+        <div data-bind="dxButton: { text: 'Previous', clickAction: '#_back' }"></div>
+        <div data-bind="dxButton: { text: 'Next', clickAction: nextQuestion }"></div>
+    </div>
+</div>
+

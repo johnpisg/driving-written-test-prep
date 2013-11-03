@@ -2,6 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
     <title>Driving Written Test Preparation</title>
 
     <!-- Framework -->
@@ -24,29 +28,28 @@
 
     <!-- End App -->
 
+    <!-- App views -->
+    <link rel="stylesheet" type="text/css" href="views/home.css" />
+    <script type="text/javascript" src="views/home.js"></script>
+    <link rel="dx-template" type="text/html" href="views/home.html"/>
+
+    <script type="text/javascript" src="views/greeting.js"></script>
+    <link rel="dx-template" type="text/html" href="views/greeting.html"/>
+
+    
+    <link rel="stylesheet" type="text/css" href="views/question.css" />
+    <script type="text/javascript" src="views/question.js"></script>
+    <link rel="dx-template" type="text/html" href="views/question.html"/>
+
 </head>
 <body>
 
-    <div data-options="dxLayout : { name: 'myLayout' } " >
+    <div data-options="dxLayout : { name: 'default' } " >
         <div data-bind="dxToolbar: { items: [ { text: 'Driving Written Test Preparation', align: 'center' } ] }" ></div>
-        <div data-options="dxContentPlaceholder : { name: 'content', transition: 'slide' } " ></div>
+        <div data-options="dxContentPlaceholder : { name: 'content', transition: 'slide' } "></div>
     </div>
 
-    <div data-options="dxView : { name: 'home'} " >
-        <div data-options="dxContent : { targetPlaceholder: 'content' } " >
-            <h1 data-bind="text: message"></h1>
-            Enter your name: <div data-bind="dxTextBox: { value: name }" style="width: 200px"></div>
-            <div data-bind="dxButton: { text: 'Say Hello', clickAction: sayHello }"></div>
-            <div data-bind="dxButton: { text: 'Greet', clickAction: greet }"></div>
-        </div>
-    </div>
-
-    <div data-options="dxView : { name: 'greeting'} " >
-        <div data-options="dxContent : { targetPlaceholder: 'content' } " >
-            <h1 data-bind="text: message"></h1>
-            <div data-bind="dxButton: { text: 'Go back', clickAction: '#_back' }"></div>
-        </div>
-    </div>
+    <div class="dx-viewport"></div>
 
 </body>
 </html>

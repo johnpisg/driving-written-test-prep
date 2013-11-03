@@ -1,32 +1,17 @@
-﻿window.JDriveTestPrep = {};
+﻿
+window.JDriveTestPrep = {};
 $(function () {
     JDriveTestPrep.app = new DevExpress.framework.html.HtmlApplication(
     {
         namespace: JDriveTestPrep,
-        defaultLayout: "myLayout"
+        defaultLayout: "default"
     }
     );
-    JDriveTestPrep.app.router.register(":view/:name", { view: "home", name: "" });
+    JDriveTestPrep.app.randomQuestions = ko.observableArray([{
+        id: 0, q: "", answers: [ { id: 0, text: "" }], useranswer: 0, ranswer: 4
+    }]);
+    JDriveTestPrep.app.router.register(":view/:name/:time/:questions/:qnumber/", 
+        { view: "home", name: "", time: "", questions:"", qnumber:""});
     JDriveTestPrep.app.navigate();
 });
 
-JDriveTestPrep.home = function () {
-    var viewModel = {
-        message: ko.observable('Welcome!'),
-        name: ko.observable(''),
-        sayHello: function () {
-            this.message("Hello " + this.name() + '!');
-        },
-        greet: function () {
-            JDriveTestPrep.app.navigate("greeting/" + this.name());
-        }
-    };
-    return viewModel;
-};
-
-JDriveTestPrep.greeting = function (params) {
-    var viewModel = {
-        message: 'Hello ' + params.name +'!',
-    };
-    return viewModel;
-};
