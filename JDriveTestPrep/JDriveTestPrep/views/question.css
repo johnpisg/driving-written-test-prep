@@ -4,3 +4,6 @@
 .multiline {
     white-space: normal !important;
 }
+.answertext {
+    display: inline !important;
+}

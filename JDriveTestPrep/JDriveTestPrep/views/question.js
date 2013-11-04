@@ -14,6 +14,8 @@ JDriveTestPrep.question = function (params) {
         },
         onAnswerClick: function (itemData) {
             
+        },
+        onTextClick: function (itemData) {
         }
     };
 
@@ -61,6 +63,10 @@ JDriveTestPrep.question = function (params) {
                 }
                 else
                     viewModel.useranswer = 0;
+            },
+            onTextClick: function (itemData) {
+                itemData.checkedState(!itemData.checkedState());
+                viewModel.onAnswerClick(itemData);
             }
         };
 

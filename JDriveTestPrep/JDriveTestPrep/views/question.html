@@ -7,8 +7,10 @@
         <div data-bind="dxList: { items: answers, activeStateEnabled: false }">
             <div data-options="dxTemplate : { name: 'item' } " >
                 <div data-bind="dxCheckBox: { checked: checkedState, clickAction: function() { $root.onAnswerClick($data); } }"></div>
-                <span data-bind="text: id"></span>
-                <span class="multiline" data-bind="text: text" style="padding-left: 5px;"></span>
+                <div class="answertext" data-bind="dxAction: function() { $root.onTextClick($data); }">
+                    <span data-bind="text: id"></span>
+                    <span class="multiline" data-bind="text: text" style="padding-left: 5px;"></span>
+                </div>
             </div>
         </div>
         <br />
