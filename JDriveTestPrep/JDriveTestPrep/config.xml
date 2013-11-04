@@ -1,0 +1,35 @@
+﻿<?xml version="1.0"?>
+<widget
+    xmlns="http://www.w3.org/ns/widgets"
+    xmlns:gap="http://phonegap.com/ns/1.0"
+    id="com.jhonpierre.jdrivetestprep"
+    versionCode="100"
+    version="0.1.0.0">
+
+  <name>JDriveTestPrep</name>
+
+  <description>
+    Sample app to prepare for my driving written test
+  </description>
+
+  <author href="http://www.google.com">
+    Jhon Pierre.
+  </author>
+
+  <preference name="phonegap-version" value="2.9.0" />
+  <preference name="orientation" value="portrait" />
+  <preference name="target-device" value="handset" />
+  <preference name="auto-hide-splash-screen" value="false" />
+  <preference name="permissions" value="none"/>
+
+  <!-- Android icons -->
+  <icon src="Resources/PackageIcons.Android.ic_launcher_36_36.png"  gap:platform="android" gap:density="ldpi" />
+  <icon src="Resources/PackageIcons.Android.ic_launcher_48_48.png"  gap:platform="android" gap:density="mdpi" />
+  <icon src="Resources/PackageIcons.Android.ic_launcher_72_72.png"  gap:platform="android" gap:density="hdpi" />
+  <icon src="Resources/PackageIcons.Android.ic_launcher_96_96.png"  gap:platform="android" gap:density="xhdpi" />
+
+  <!-- iPhone icons -->
+  <icon src="Resources/PackageIcons.iOS.icon.png"  gap:platform="ios" width="57" height="57" />
+  <icon src="Resources/PackageIcons.iOS.icon@2x.png" gap:platform="ios" width="114" height="114" />
+
+</widget>

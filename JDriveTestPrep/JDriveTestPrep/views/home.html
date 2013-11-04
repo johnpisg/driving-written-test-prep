@@ -4,10 +4,13 @@
         <br />
         Enter your name: <div data-bind="dxTextBox: { value: name }" style="width: 200px"></div>
         <br />
-        Number of questions: <div class="time-div" data-bind="dxTextBox: { value: questionNumber }" style="width: 200px"></div>
+        Number of questions: <div data-bind="dxTextBox: { value: questionNumber }" style="width: 200px"></div>
         <br />
-        Time for the Test (min): <div class="time-div" data-bind="dxTextBox: { value: time }" style="width: 200px"></div>
+        Time for the Test (min): <div data-bind="dxTextBox: { value: time }" style="width: 200px"></div>
         <br />
         <div data-bind="dxButton: { text: 'Start Random Test', clickAction: start }"></div>
+        <div class="bottom">
+            <div data-bind="dxButton: { text: 'About', clickAction: about }"></div>
+        </div>
     </div>
 </div>

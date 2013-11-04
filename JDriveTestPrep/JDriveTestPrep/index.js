@@ -1,6 +1,8 @@
 ﻿
 window.JDriveTestPrep = {};
+
 $(function () {
+
     JDriveTestPrep.app = new DevExpress.framework.html.HtmlApplication(
     {
         namespace: JDriveTestPrep,
@@ -13,5 +15,8 @@ $(function () {
     JDriveTestPrep.app.router.register(":view/:name/:time/:questions/:qnumber/", 
         { view: "home", name: "", time: "", questions:"", qnumber:""});
     JDriveTestPrep.app.navigate();
+
+    
+
 });
 

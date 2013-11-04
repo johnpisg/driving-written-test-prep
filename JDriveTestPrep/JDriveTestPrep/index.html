@@ -25,6 +25,7 @@
     <!-- App -->
     <link rel="stylesheet" type="text/css" href="index.css" />
     <script type="text/javascript" src="index.js"></script> 
+    <script src="Resources/questions.json.js"></script>
 
     <!-- End App -->
 
@@ -35,18 +36,26 @@
 
     <script type="text/javascript" src="views/greeting.js"></script>
     <link rel="dx-template" type="text/html" href="views/greeting.html"/>
-
     
     <link rel="stylesheet" type="text/css" href="views/question.css" />
     <script type="text/javascript" src="views/question.js"></script>
     <link rel="dx-template" type="text/html" href="views/question.html"/>
 
+    <script type="text/javascript" src="views/checktest.js"></script>
+    <link rel="dx-template" type="text/html" href="views/checktest.html"/>
+
+
+    <link rel="dx-template" type="text/html" href="views/about.html"/>
+
+
 </head>
 <body>
 
     <div data-options="dxLayout : { name: 'default' } " >
-        <div data-bind="dxToolbar: { items: [ { text: 'Driving Written Test Preparation', align: 'center' } ] }" ></div>
+        <div data-bind="dxToolbar: { items: [ { text: 'Driving Written Test Preparation', align: 'center' } ] }" >
+        </div>
         <div data-options="dxContentPlaceholder : { name: 'content', transition: 'slide' } "></div>
+        <div></div>
     </div>
 
     <div class="dx-viewport"></div>

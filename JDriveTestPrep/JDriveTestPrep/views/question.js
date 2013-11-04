@@ -30,16 +30,22 @@ JDriveTestPrep.question = function (params) {
                 if (viewModel.useranswer == "" || viewModel.useranswer == 0) {
                     DevExpress.ui.dialog.alert('Choose an answer first.', 'Warning!');
                 } else {
-                    var nextNumber = parseInt(params.qnumber) + 1;
-                    console.log(nextNumber);
-                    console.log(JDriveTestPrep.app.randomQuestions().length);
+                    //save the viewModel.useranswer
+                    JDriveTestPrep.app.randomQuestions()[params.qnumber - 1].useranswer = viewModel.useranswer;
+
+                    var nextNumber = parseInt(params.qnumber, 10) + 1;
+                    //console.log(nextNumber);
+                    //console.log(JDriveTestPrep.app.randomQuestions().length);
                     if (nextNumber <= JDriveTestPrep.app.randomQuestions().length) {
                         //navigate 
                         JDriveTestPrep.app.navigate("question/" + params.name + "/" + params.time + "/" + params.questions + "/" + nextNumber);
                     } else {
                         var result = DevExpress.ui.dialog.confirm('You have finished. Do you want to evaluate your answers now?', 'Question!');
                         result.done(function (dialogResult) {
-                            console.log(dialogResult ? "Confirmed" : "Canceled");
+                            //console.log(dialogResult ? "Confirmed" : "Canceled");
+                            if (dialogResult) {
+                                JDriveTestPrep.app.navigate("checktest/" + params.name + "/" + params.time + "/" + params.questions + "/" + "0");
+                            }
                         });
                         
                     }

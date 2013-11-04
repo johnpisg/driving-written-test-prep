@@ -1,9 +1,9 @@
 ﻿(function ($, DX, undefined) {
-    console.log("fn");
+    //console.log("fn");
     DX.framework.html.NavBarController = DX.framework.html.DefaultLayoutController.inherit({
 
         _onRenderComplete: function (viewInfo) {
-            console.log("viewInfo ");
+            //console.log("viewInfo ");
             var CLASS_NAME = "has-toolbar";
 
             var $layoutFooter = viewInfo.renderResult.$markup.find(".layout-footer"),
@@ -43,7 +43,7 @@
         },
 
         _initToolbar: function ($markup) {
-            console.log("markup ");
+            //console.log("markup ");
             var $layoutFooter = $markup.find(".layout-toolbar-bottom.win8");
             if (!$layoutFooter.data("__inited")) {
                 $layoutFooter.data("__inited", true);
