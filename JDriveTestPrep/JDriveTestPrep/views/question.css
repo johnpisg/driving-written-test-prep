@@ -1,3 +1,6 @@
 ﻿.number {
     display: inline !important;
 }
+.multiline {
+    white-space: normal !important;
+}
