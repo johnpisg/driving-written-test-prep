@@ -23,13 +23,13 @@
   <preference name="permissions" value="none"/>
 
   <!-- Android icons -->
-  <icon src="Resources/PackageIcons.Android.ic_launcher_36_36.png"  gap:platform="android" gap:density="ldpi" />
-  <icon src="Resources/PackageIcons.Android.ic_launcher_48_48.png"  gap:platform="android" gap:density="mdpi" />
-  <icon src="Resources/PackageIcons.Android.ic_launcher_72_72.png"  gap:platform="android" gap:density="hdpi" />
-  <icon src="Resources/PackageIcons.Android.ic_launcher_96_96.png"  gap:platform="android" gap:density="xhdpi" />
+  <icon src="Resources/PackageIconsAndroidiclauncher3636.png"  gap:platform="android" gap:density="ldpi" />
+  <icon src="Resources/PackageIconsAndroidiclauncher4848.png"  gap:platform="android" gap:density="mdpi" />
+  <icon src="Resources/PackageIconsAndroidiclauncher7272.png"  gap:platform="android" gap:density="hdpi" />
+  <icon src="Resources/PackageIconsAndroidiclauncher9696.png"  gap:platform="android" gap:density="xhdpi" />
 
   <!-- iPhone icons -->
-  <icon src="Resources/PackageIcons.iOS.icon.png"  gap:platform="ios" width="57" height="57" />
-  <icon src="Resources/PackageIcons.iOS.icon@2x.png" gap:platform="ios" width="114" height="114" />
+  <icon src="Resources/PackageIconsiOSicon.png"  gap:platform="ios" width="57" height="57" />
+  <icon src="Resources/PackageIconsiOSicon@2x.png" gap:platform="ios" width="114" height="114" />
 
 </widget>

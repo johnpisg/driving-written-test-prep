@@ -21,6 +21,14 @@ JDriveTestPrep.home = function () {
         },
         about: function () {
             JDriveTestPrep.app.navigate("about");
+        }, 
+        exit: function () {
+            try {
+                JDriveTestPrep.app.exitApp();
+            }
+            catch (e) {
+                DevExpress.ui.dialog.alert(e.message, 'Exception');
+            }
         }
     };
     return viewModel;
