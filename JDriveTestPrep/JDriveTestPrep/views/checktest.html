@@ -6,5 +6,13 @@
         <h2 data-bind="text: points"></h2>
         <br />
         <div data-bind="dxButton: { text: 'Restart', clickAction: restart }"></div>
+        <br />
+        <div data-bind="dxList: { items: arrayWrong }">
+            <div data-options="dxTemplate : { name: 'item' } " >
+                <h2 class="number multiline" data-bind="text: q"></h2>
+                <br />
+                Correct Answer is: <span data-bind="text: correctAnswer"></span>                
+            </div>
+        </div>
     </div>
 </div>

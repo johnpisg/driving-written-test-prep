@@ -11,7 +11,7 @@ JDriveTestPrep.home = function () {
         start: function () {
             if (this.name().trim() == "") {
                 DevExpress.ui.dialog.alert('Enter a name', 'Warning!');
-            } else if (this.questionNumber() == "" || this.questionNumber() <= 0 || this.questionNumber() > 8) {
+            } else if (this.questionNumber() == "" || this.questionNumber() <= 0 || this.questionNumber() > 68) {
                 DevExpress.ui.dialog.alert('The number of random questions should be between 1 and 8.', 'Warning!');
             } else if (this.time() == "" || this.time() <= 0 || this.time() > 30) {
                 DevExpress.ui.dialog.alert('The time should be between 1 and 30.', 'Warning!');
